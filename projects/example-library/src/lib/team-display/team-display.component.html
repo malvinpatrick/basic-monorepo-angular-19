@@ -1,0 +1,16 @@
+<div class="team-container">
+  <div class="team-header">
+    <h2>Our Team</h2>
+    <p class="team-description">Meet our talented professionals who make everything possible</p>
+  </div>
+  
+  <div class="team-grid">
+    <div class="team-member" *ngFor="let member of teamMembers">
+      <lib-person-card 
+        [name]="member.name"
+        [jobTitle]="member.jobTitle"
+        [avatarUrl]="member.avatarUrl">
+      </lib-person-card>
+    </div>
+  </div>
+</div>
