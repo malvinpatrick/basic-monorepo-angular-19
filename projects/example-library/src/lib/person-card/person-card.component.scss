@@ -1,5 +1,6 @@
 .person-card {
-  width: 300px;
+  display: flex;
+  flex-direction: row;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -11,13 +12,24 @@
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
   }
+  
+  @media (max-width: 576px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .person-card-header {
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, #6e8efb, #a777e3);
+  min-width: 120px;
+  
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 }
 
 .avatar {
@@ -44,11 +56,22 @@
     color: white;
     text-transform: uppercase;
   }
+  
+  @media (max-width: 576px) {
+    margin: 0 auto;
+  }
 }
 
 .person-card-body {
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  
+  @media (max-width: 576px) {
+    text-align: center;
+  }
 }
 
 .person-name {
@@ -56,6 +79,10 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
+  
+  @media (max-width: 576px) {
+    margin-top: 10px;
+  }
 }
 
 .person-job-title {
